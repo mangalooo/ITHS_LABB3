@@ -47,7 +47,7 @@ function ContactForm() {
         ]
         setList(newData)
         contactCounter.current++
-        alert('Kontakter i listan: ' + contactCounter.current)
+        alert('Contact list: ' + contactCounter.current)
     }
 
     const removeItem = (index, addList) => {
@@ -62,7 +62,7 @@ function ContactForm() {
             <Form>
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formFirstname">
-                        <Form.Label> Förnamn </Form.Label>
+                        <Form.Label> Firstname </Form.Label>
                         <Form.Control
                             type="text"
                             value={formFirstname}
@@ -71,7 +71,7 @@ function ContactForm() {
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formLastname">
-                        <Form.Label> Efternamn </Form.Label>
+                        <Form.Label> Lastname </Form.Label>
                         <Form.Control
                             type="text"
                             value={formLastname}
@@ -80,7 +80,7 @@ function ContactForm() {
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formMobile">
-                        <Form.Label> Mobil </Form.Label>
+                        <Form.Label> Mobile </Form.Label>
                         <Form.Control
                             type="text"
                             value={formMobile}
@@ -91,7 +91,7 @@ function ContactForm() {
 
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formEmail">
-                        <Form.Label> E-post </Form.Label>
+                        <Form.Label> Email </Form.Label>
                         <Form.Control
                             type="email"
                             value={formEmail}
@@ -106,14 +106,14 @@ function ContactForm() {
                         type="submit"
                         onClick={AddContactList}
                     >
-                        Spara
+                        Save
                     </Button>
                 </div>
             </Form>
 
             <br />
             <br />
-            <h1 className="text-center"> Kontaktlista </h1>
+            <h1 className="text-center"> Contact list </h1>
             <br />
             <ul className="text-center">
                 {Array.isArray(list)
@@ -135,7 +135,7 @@ function ContactForm() {
                                   size="sm"
                                   onClick={() => removeItem(index, list)}
                               >
-                                  Ta bort kontakt
+                                  Remove contact
                               </Button>
                               {<br />}
                               {<br />}

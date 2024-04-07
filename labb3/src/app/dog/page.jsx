@@ -9,8 +9,10 @@ export default function Contacts() {
         <main className="text-center">
             <br />
             <DogHeading />
-            <DogPicture />
-            <DogFacts />
+                <DogPicture />
+                <br />
+                <br />
+                <DogFacts />
         </main>
     )
 }

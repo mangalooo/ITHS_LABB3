@@ -5,7 +5,7 @@ import ContactForm from './ContactForm'
 
 export default function Contacts() {
     return (
-        <main style={{width:700}}>
+        <main >
             <br />
             <ContactHeading />
             <ContactForm />

@@ -1,4 +1,5 @@
 'use client'
+
 import { useState, useEffect } from 'react'
 
 export default function Joke() {
@@ -19,30 +20,31 @@ export default function Joke() {
             })
     }, [])
 
-    if (loading) return <p>Loading...</p>
-    if (error) return <p>Error: {error.message}</p>
+    if (loading) return <p className="text-center">Loading...</p>
+    if (error) return <p className="text-center">Error: {error.message}</p>
 
     const returnJoke = () => {
         const getJoke = data['value']
 
         return (
+
             <div className="text-center">
                 <br />
                 <h1> Joke </h1>
                 <br />
                 <img
                     src="https://img.freepik.com/free-photo/funny-monkey-with-sunglasses-studio_23-2150844149.jpg?w=1380"
-                    alt="placeholder"
+                    alt="Joke pic"
                     style={{ height: 400, width: 400 }}
                 />
                 <br />
                 <br />
                 <p> {getJoke} </p>
+
+                <br />
+                <br />
             </div>
         )
     }
-
-    return (
-        <>{returnJoke()}</>
-    )
+    return returnJoke();
 }

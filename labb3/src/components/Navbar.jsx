@@ -1,8 +1,8 @@
 // components/NavBar.jsx
-
+import React from 'react';
 import Button from 'react-bootstrap/Button'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
-import 'bootstrap/dist/css/bootstrap.css'
+//import 'bootstrap/dist/css/bootstrap.css'
 import Link from 'next/link'
 
 export default function NavBar() {
@@ -10,7 +10,6 @@ export default function NavBar() {
         <nav className="text-center">
             <br />
             <br />
-
             <ButtonGroup size="lg" className="mb-2">
                 <Link href="/">
                     <Button variant="secondary">Start</Button>
@@ -23,6 +22,9 @@ export default function NavBar() {
                 </Link>
                 <Link href="/contact">
                     <Button variant="success">Contacts</Button>
+                </Link>
+                <Link href="/">
+                    <Button variant="secondary">Back</Button>
                 </Link>
             </ButtonGroup>
         </nav>

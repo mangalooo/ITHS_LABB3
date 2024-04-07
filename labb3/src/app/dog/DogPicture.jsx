@@ -28,7 +28,7 @@ function DogPicture() {
     return (
         <img
             src={getDogPicture}
-            alt="placeholder"
+            alt="Dog pic"
             style={{ height: 400, width: 400 }}
         />
     )
